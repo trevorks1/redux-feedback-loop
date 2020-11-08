@@ -28,6 +28,8 @@ function feedbackReducer(state = originalFeedback, action) {
       feeling: action.payload,
     };
   }
+
+  return state;
 }
 
 // understandingReducer
@@ -38,6 +40,8 @@ function understandingReducer(state = originalFeedback, action) {
       understanding: action.payload,
     };
   }
+
+  return state;
 }
 
 // supportReducer
@@ -48,6 +52,8 @@ function supportReducer(state = originalFeedback, action) {
       support: action.payload,
     };
   }
+
+  return state;
 }
 
 // commentsReducer
@@ -58,6 +64,8 @@ function commentsReducer(state = originalFeedback, action) {
       comments: action.payload,
     };
   }
+
+  return state;
 }
 
 // Redux store

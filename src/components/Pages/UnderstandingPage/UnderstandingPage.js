@@ -35,7 +35,7 @@ class UnderstandingPage extends Component {
         <input
           id="understanding"
           type="number"
-          placeholder="Number between 1 and 5"
+          placeholder="Between 1 and 5"
           onChange={this.handleChangeField}
         />
         <button onClick={this.handleClickNext}>Next</button>

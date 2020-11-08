@@ -28,7 +28,7 @@ class CommentsPage extends Component {
         <input
           id="comments"
           type="text"
-          placeholder="Enter anty comments you may have."
+          placeholder="Enter any comments you may have."
           onChange={this.handleChangeField}
         />
         <button onClick={this.handleClickNext}>Next</button>
