@@ -19,6 +19,12 @@ class FeelingPage extends Component {
     });
   };
 
+  handleChangeField = (event) => {
+    this.setState({
+      feelingInput: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div>
