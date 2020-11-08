@@ -8,10 +8,10 @@ class UnderstandingPage extends Component {
 
   handleClickNext = () => {
     if (
-      this.state.understandingInput === '' &&
+      this.state.understandingInput === '' ||
       !this.state.understandingInput
     ) {
-      alert('Please score your feelings before moving to next page.');
+      alert('Please score your understanding before moving to next page.');
       return;
     }
     this.props.history.push('/support');
@@ -20,6 +20,7 @@ class UnderstandingPage extends Component {
       payload: parseInt(this.state.understandingInput),
     });
   };
+
   handleChangeField = (event) => {
     this.setState({
       understandingInput: event.target.value,

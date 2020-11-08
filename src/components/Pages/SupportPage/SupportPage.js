@@ -6,6 +6,25 @@ class SupportPage extends Component {
     supportInput: '',
   };
 
+  handleClickNext = () => {
+    if (this.state.supportInput === '' || !this.state.supportInput) {
+      alert('Please score your support before moving to next page.');
+      return;
+    }
+
+    this.props.history.push('/comments');
+    this.props.dispatch({
+      type: 'GIVE_SUPPORT',
+      payload: parseInt(this.state.supportInput),
+    });
+  };
+
+  handleChangeField = (event) => {
+    this.setState({
+      supportInput: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div>

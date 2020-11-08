@@ -7,7 +7,7 @@ class FeelingPage extends Component {
   };
 
   handleClickNext = () => {
-    if (this.state.feelingInput === '' && !this.state.feelingInput) {
+    if (this.state.feelingInput === '' || !this.state.feelingInput) {
       alert('Please score your feelings before moving to next page.');
       return;
     }
