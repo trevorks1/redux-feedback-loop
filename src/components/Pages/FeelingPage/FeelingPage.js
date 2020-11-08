@@ -6,6 +6,19 @@ class FeelingPage extends Component {
     feelingInput: '',
   };
 
+  handleClickNext = () => {
+    if (this.state.feelingInput === '' && !this.state.feelingInput) {
+      alert('Please score your feelings before moving to next page.');
+      return;
+    }
+
+    this.props.history.push('/understanding');
+    this.props.dispatch({
+      type: 'GIVE_FEELING',
+      payload: parseInt(this.state.feelingInput),
+    });
+  };
+
   render() {
     return (
       <div>

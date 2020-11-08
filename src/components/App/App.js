@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import './App.css';
 
 // Hash routes for my pages to be routed to the app.js
@@ -21,13 +21,10 @@ class App extends Component {
             </h4>
           </header>
           <br />
-          <Route exact path="/" component={FeelingPage} /> // FeelingPage Route
-          <Route exact path="/understanding" component={UnderstandingPage} /> //
-          Understanding Page Route
-          <Route exact path="/support" component={SupportPage} /> // Support
-          Page Route
-          <Route exact path="/comments" component={CommentsPage} /> // Comments
-          Page Route
+          <Route exact path="/" component={FeelingPage} />
+          <Route exact path="/understanding" component={UnderstandingPage} />
+          <Route exact path="/support" component={SupportPage} />
+          <Route exact path="/comments" component={CommentsPage} />
         </div>
       </Router>
     );

@@ -20,6 +20,7 @@ const originalFeedback = {
 
 // feedbackReducer
 function feedbackReducer(state = originalFeedback, action) {
+  console.log(feedbackReducer, 'feedbackReducer');
   if (action.type === 'GIVE_FEELING') {
     return {
       ...state,
