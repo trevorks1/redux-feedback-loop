@@ -14,6 +14,7 @@ const originalFeedback = {
   support: '',
   comments: '',
 };
+
 //
 // Reducer Functions --------------------------
 //
@@ -34,7 +35,7 @@ function understandingReducer(state = originalFeedback, action) {
   if (action.type === 'GIVE_UNDERSTANDING') {
     return {
       ...state,
-      feeling: action.payload,
+      understanding: action.payload,
     };
   }
 }
@@ -44,7 +45,7 @@ function supportReducer(state = originalFeedback, action) {
   if (action.type === 'GIVE_SUPPORT') {
     return {
       ...state,
-      feeling: action.payload,
+      support: action.payload,
     };
   }
 }
@@ -54,7 +55,7 @@ function commentsReducer(state = originalFeedback, action) {
   if (action.type === 'GIVE_COMMENTS') {
     return {
       ...state,
-      feeling: action.payload,
+      comments: action.payload,
     };
   }
 }

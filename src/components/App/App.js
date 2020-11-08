@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
 import './App.css';
 
 // Hash routes for my pages to be routed to the app.js
@@ -7,6 +8,7 @@ import FeelingPage from '../Pages/FeelingPage/FeelingPage';
 import UnderstandingPage from '../Pages/UnderstandingPage/UnderstandingPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
 import CommentsPage from '../Pages/CommentsPage/CommentsPage';
+import ReviewPage from '../Pages/ReviewPage/ReviewPage';
 
 class App extends Component {
   render() {
@@ -24,6 +26,7 @@ class App extends Component {
           <Route exact path="/understanding" component={UnderstandingPage} />
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentsPage} />
+          <Route exact path="/review" component={ReviewPage} />
         </div>
       </Router>
     );
