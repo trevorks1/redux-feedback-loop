@@ -10,7 +10,7 @@ class UnderstandingPage extends Component {
     return (
       <div>
         <h2>Any comments you want to leave?</h2>
-        <label htmlFor="feelings">Understanding?</label>
+        <label htmlFor="understanding">Understanding?</label>
         <input
           id="understanding"
           type="number"

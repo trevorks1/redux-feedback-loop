@@ -10,7 +10,7 @@ class SupportPage extends Component {
     return (
       <div>
         <h2>How well are you being supported?</h2>
-        <label htmlFor="feelings">Support?</label>
+        <label htmlFor="support">Support?</label>
         <input
           id="support"
           type="number"
