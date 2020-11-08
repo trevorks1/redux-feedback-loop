@@ -6,6 +6,26 @@ class UnderstandingPage extends Component {
     understandingInput: '',
   };
 
+  handleClickNext = () => {
+    if (
+      this.state.understandingInput === '' &&
+      !this.state.understandingInput
+    ) {
+      alert('Please score your feelings before moving to next page.');
+      return;
+    }
+    this.props.history.push('/support');
+    this.props.dispatch({
+      type: 'GIVE_UNDERSTANDING',
+      payload: parseInt(this.state.understandingInput),
+    });
+  };
+  handleChangeField = (event) => {
+    this.setState({
+      understandingInput: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div>
