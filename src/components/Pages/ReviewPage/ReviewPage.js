@@ -10,7 +10,12 @@ class ReviewPage extends Component {
 
   postFeedback() {
     axios
-      .post('/api/feedback', this.props.store.feedbackReducer)
+      .post('/api/feedback', {
+        feeling: this.props.store.feedbackReducwer.feeling,
+        understanding: this.props.store.understandingReducer.understanding,
+        support: this.props.store.supportReducer.support,
+        comments: this.props.store.commentsReducer.comments,
+      })
       .then((response) => {
         console.log('POST feedback', response);
       })
