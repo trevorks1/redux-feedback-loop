@@ -6,6 +6,20 @@ class CommentsPage extends Component {
     commentsInput: '',
   };
 
+  handleClickNext = () => {
+    this.props.history.push('/review');
+    this.props.dispatch({
+      type: 'GIVE_COMMENTS',
+      payload: this.state.commentsInput,
+    });
+  };
+
+  handleChangeField = (event) => {
+    this.setState({
+      commentsInput: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div>
